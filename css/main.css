@@ -1,0 +1,171 @@
+
+body {
+    overflow-x: hidden;
+}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+	margin: auto;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:95%;
+	height:95%;
+}
+
+a {
+    border-bottom: none;
+}
+
+a:hover {
+    border-bottom: dotted 1px;
+}
+
+.center {
+    text-align: center;
+}
+
+.name {
+    text-decoration: none;
+}
+
+.face:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-pic {
+    position: absolute;
+    bottom: 0;
+}
+
+.header-span {
+    background-image: url("../images/Google.png");
+    /* lt ie8 */
+    -ms-background-position-x: center;
+    -ms-background-position-y: top;
+    background-position: center top;
+
+    /* scale bg image proportionately */
+    background-size: cover;
+
+    /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+    -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
+    /* prevent scaling past src width (or not) */
+    /* max-width: 1200px; */
+}
+
+/* apply to both img.scale and div.crop-height */
+.flip {
+  -webkit-transform: rotate(180deg);
+  -moz-transform:    rotate(180deg);
+  -ms-transform:     rotate(180deg);
+  -o-transform:      rotate(180deg);
+  transform:         rotate(180deg);
+  /* needed? not sure */
+  zoom: 1;
+}
+
+img.flip {
+  /* if native or declared width of img.scale
+     is less than div.crop-height, this will
+     flipped img left */
+  float: right;
+  /* add clearfix if needed */
+}
+
+.keywords {
+    font-size: 70%;
+}
+
+.downloads {
+    position:absolute;
+    bottom: 0;
+    min-width: 100vw;
+    margin: 0 0 0.9em 0;
+}
+
+@media screen and (orientation: landscape) and (max-width: 813px) {
+    .downloads {
+        position: relative;
+        bottom: auto;
+        margin: 0.5em 0 1.5em 0;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .downloads {
+        margin: 0.5em 0 1.5em 0;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 813px) {
+    .downloads {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.pub-pic {
+    margin: 0.5em 0;
+}
+
+.pub-pic:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor:pointer;
+}
+
+.pub-info {
+    margin: 0.5em 0;
+    font-size: 90%;
+}
+
+.pub-info h4 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.pub-info>p{
+    margin: 0;
+}
+
+.pub {
+    position: relative;
+	margin-bottom: 0.3em;
+}
+
+.booktitle {
+    font-style: italic;
+}
+
+.authors {
+
+}
+
+.title {
+    font-weight: bold;
+}
+
+.award {
+    color: #f56a6a;
+    font-weight: bold;
+}
+
+.news {
+    color: #f56a6a;
+    font-weight: italic;
+}
+
+#vemail {
+	cursor: pointer;
+}
+
+#vphone {
+	cursor: pointer;
+}
